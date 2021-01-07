@@ -14,5 +14,9 @@ where y hat is the projected revenue for a customer and y is the natural log of 
 ## **Data Collection & Preparation**
 The data is provided by Kaggle. There are 2 different CSV files:
 
- - train.csv
-    - This is 
+ - train.csv:
+    - This is the training dataset that contains user transactions from August 1st, 2016 to April 30th, 2018.
+ - test.csv:
+    - This is the testing dataset that contains user transactions from May 1st, 2018 to October 15th, 2018.
+    
+Both of the train and the test sets contain the columns listed under Data Fields (below). The only difference between the train and test sets is the extra information stored in the train set, TransactionRevenue, under one of the JSON columns, Totals. This sub-column  TransactionRevenue contains the revenue information we are trying to predict in this project. In addition, each row in the datasets represents one visit to the GStore. 
