@@ -29,7 +29,7 @@ Both of the train and the test sets contain the columns listed under Data Fields
   7. VisitStartTime: A timestamp records the date of customer visiting. This variable is expressed as POSIX time. For POSIX time, every day is treated as if it contains exactly 86400 seconds, so it calculated as (sum of days between current date and 1970-01-01) * 86400.
   8. Device (JSON):
   
-    - Browser: The browser used to visit the store, including Chrome, Firefox, and UC browser. There are a total of 109 browsers in this variable. 
+    * Browser: The browser used to visit the store, including Chrome, Firefox, and UC browser. There are a total of 109 browsers in this variable. 
     - OperatingSystem: Identify the operating system used to visit the store. There are a total of 19 operating systems in this variable including IOS, Macintosh, and Windows.
     - IsMobile: Whether the device is mobile. Returns True or False.
     - DeviceCategory: Identify the category of the device. There are 3 device categories, desktop, mobile, and tablet.
