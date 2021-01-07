@@ -15,4 +15,4 @@ where y hat is the projected revenue for a customer and y is the natural log of 
 The data is provided by Kaggle. There are 2 different CSV files:
 
  - train.csv
-  - This is 
+    - This is 
