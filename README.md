@@ -13,5 +13,6 @@ The goal of this project is to build an algorithm with appropriate customer segm
 where y hat is the projected revenue for a customer and y is the natural log of the actual revenue value.
 ## **Data Collection & Preparation**
 The data is provided by Kaggle. There are 2 different CSV files:
+ - **Cluster 3: Revenue = 3.17218 * Marketing Spend + 45983.9**
   - train.csv
     - This is 
