@@ -90,6 +90,7 @@ Cluster 4 is also outstanding on hits and page views while cluster 1 has the top
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Transaction%20Revenue%20Analysis.png">
 </p>
 For the transaction revenues, most of them come from cluster 4. Cluster 1, with the minimal person, is the second largest source for transaction revenue.
+
 According to the results, we believe that cluster 1 the niche market and cluster 4 is our target customer, thus we decided to focus on these two clusters.
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Cluster%201%20Paid%20Users%20in%20US.png">
