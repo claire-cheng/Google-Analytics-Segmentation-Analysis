@@ -6,3 +6,12 @@ GA’s marketing teams are challenged to make appropriate investments in its pro
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Formula.png" width="300" height="150">
 </p>
+The goal of this project is to build an algorithm with appropriate customer segments to help GStore’s marketing team make precision marketing strategies. We need to build an algorithm with the lowest root mean squared error, which is defined as: 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/RMSE.png" width="300" height="150">
+</p>
+where y hat is the projected revenue for a customer and y is the natural log of the actual revenue value.
+## **Data Collection & Preparation**
+The data is provided by Kaggle. There are 2 different CSV files:
+- train.csv
+  - This is 
