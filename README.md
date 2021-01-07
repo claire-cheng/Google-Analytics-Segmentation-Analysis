@@ -14,6 +14,5 @@ where y hat is the projected revenue for a customer and y is the natural log of 
 ## **Data Collection & Preparation**
 The data is provided by Kaggle. There are 2 different CSV files:
 
- - **Cluster 3: Revenue = 3.17218 * Marketing Spend + 45983.9**
-  - train.csv
-    - This is 
+ - train.csv
+  - This is 
