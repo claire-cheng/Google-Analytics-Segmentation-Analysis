@@ -28,6 +28,7 @@ Both of the train and the test sets contain the columns listed under Data Fields
   6. VisitNumber: The session number for this user. If this is the first session, then this is set to 1. It is stored as an integer.
   7. VisitStartTime: A timestamp records the date of customer visiting. This variable is expressed as POSIX time. For POSIX time, every day is treated as if it contains exactly 86400 seconds, so it calculated as (sum of days between current date and 1970-01-01) * 86400.
   8. Device (JSON):
+  
     1. Browser: The browser used to visit the store, including Chrome, Firefox, and UC browser. There are a total of 109 browsers in this variable. 
     2. OperatingSystem: Identify the operating system used to visit the store. There are a total of 19 operating systems in this variable including IOS, Macintosh, and Windows.
     3. IsMobile: Whether the device is mobile. Returns True or False.
