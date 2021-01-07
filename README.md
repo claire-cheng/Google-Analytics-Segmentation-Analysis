@@ -2,11 +2,11 @@
 ## **Project Aims and Background**
 Google Analytics (GA) is a web analytics service that tracks and reports website traffic. GA is offering this tool to e-commerce companies and those who operate on digital platforms to better understand their customers and make sure of these business insights to take actions and make better decisions. 
 
-GA’s marketing teams are challenged to make appropriate investments in its promotional strategies. However, GA is not sure whether the data they are providing to the clients are enough to do predictive analytics on revenue. In this project, we are analyzing a Google Merchandise Store, called GStore, where Google products are sold. We will be using GStore’s customer dataset that was collected from Google Analytics to predict revenue per customer- the natural log of the sum of all transactions per user. For every user in the test set, the target is:
+GA’s marketing teams are challenged to make appropriate investments in its promotional strategies. However, GA is not sure whether the data they are providing to the clients are enough to do predictive analytics on revenue. In this project, I am analyzing a Google Merchandise Store, called GStore, where Google products are sold. I will be using GStore’s customer dataset that was collected from Google Analytics to predict revenue per customer- the natural log of the sum of all transactions per user. For every user in the test set, the target is:
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Formula.png" width="300" height="150">
 </p>
-The goal of this project is to build an algorithm with appropriate customer segments to help GStore’s marketing team make precision marketing strategies. We need to build an algorithm with the lowest root mean squared error, which is defined as: 
+The goal of this project is to build an algorithm with appropriate customer segments to help GStore’s marketing team make precision marketing strategies. I need to build an algorithm with the lowest root mean squared error, which is defined as: 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/RMSE.png" width="350" height="125">
@@ -19,7 +19,7 @@ The data is provided by Kaggle. There are 2 different CSV files:
     - This is the training dataset that contains user transactions from August 1st, 2016 to April 30th, 2018.
  - test.csv:
     - This is the testing dataset that contains user transactions from May 1st, 2018 to October 15th, 2018.
-Both of the train and the test sets contain the columns listed under Data Fields (below). The only difference between the train and test sets is the extra information stored in the train set, TransactionRevenue, under one of the JSON columns, Totals. This sub-column  TransactionRevenue contains the revenue information we are trying to predict in this project. In addition, each row in the datasets represents one visit to the GStore. 
+Both of the train and the test sets contain the columns listed under Data Fields (below). The only difference between the train and test sets is the extra information stored in the train set, TransactionRevenue, under one of the JSON columns, Totals. This sub-column  TransactionRevenue contains the revenue information I am trying to predict in this project. In addition, each row in the datasets represents one visit to the GStore. 
 ## **Data Fields**
   1. ChannelGrouping: the channel via which the user came to the store. There are total 8 factors: Organic search, Paid search, Display, Direct, Referral, Social, Affiliates, Other.
   2. Date: record the date when the user visited the store.
@@ -61,7 +61,7 @@ Both of the train and the test sets contain the columns listed under Data Fields
       - AdwordsClickInfo.adNetworkType:Identify the content type for user
       - AdwordsClickInfo.isVideoAd: Identify if the content is a video or not.
 ## **Clustering for Customer Segmentation**
-By performing customer segmentation, all customers are divided into separate groups that share certain characteristics. The optimal characteristics that can be used for segmentations are highly depending on the specific business objective. In this project, we are using GA data that includes behavioral data and geographical information tracked and reported based on GStore’s website traffic. 
+By performing customer segmentation, all customers are divided into separate groups that share certain characteristics. The optimal characteristics that can be used for segmentations are highly depending on the specific business objective. In this project, I am using GA data that includes behavioral data and geographical information tracked and reported based on GStore’s website traffic. 
 
 Since there is not a correct ‘answer’, a single or a right way, to segment customers and the target is to define groups of customers who are sharing characteristics within the group and showing differences from other groups, an unsupervised clustering technique is chosen to be the appropriate analytical technique in this project.
 
@@ -69,11 +69,11 @@ Clustering is an unsupervised machine learning technique, where there are no def
 
 The objective of clustering algorithms is to ensure that the distance between data points in a cluster is low compared to the distance between 2 clusters. In other words, members in the same group are very similar and members that are in different groups are extremely dissimilar, which perfectly suits the purpose of customer segmentation in this project.
 
-In this project, we applied k-means and hierarchical clustering from clustering algorithms and finally chose the results of k-means. This is mainly due to the scale of our large datasets. 
+In this project, I applied k-means and hierarchical clustering from clustering algorithms and finally chose the results of k-means. This is mainly due to the scale of our large datasets. 
 
-Our website traffic data from GA has 903653 observations of 35 variables which is too large to be processed by hierarchical clustering. Although hierarchical clustering is simple and intuitive but does not scale well to large datasets. Thus, we chose the interactive clustering algorithm, k-means.
+Our website traffic data from GA has 903653 observations of 35 variables which is too large to be processed by hierarchical clustering. Although hierarchical clustering is simple and intuitive but does not scale well to large datasets. Thus, I chose the interactive clustering algorithm, k-means.
 ## **Result and Profile**
-We used the elbow method to determine the optimal number of clusters. Based on the Total Within Sum of Squares Plot and the Ratio Plot, we decided to group the dataset into 4 clusters, where the distortion/inertia start decreasing slightly in a linear fashion.
+I used the elbow method to determine the optimal number of clusters. Based on the Total Within Sum of Squares Plot and the Ratio Plot, I decided to group the dataset into 4 clusters, where the distortion/inertia start decreasing slightly in a linear fashion.
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Elbow_chart.png">
 </p>
@@ -81,7 +81,7 @@ Within the 4 clusters, cluster 1 has c observations, cluster 2 has 78812 observa
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Hits%20and%20Pageviews%20Analysis.png">
 </p>
-We calculate the average of hits and pageviews for each cluster. According to the chart, we can see that cluster 4 has much higher numbers for hits and page views compared to other clusters.
+I calculate the average of hits and pageviews for each cluster. According to the chart, I can see that cluster 4 has much higher numbers for hits and page views compared to other clusters.
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Visit%20Number%20Analysis.png">
 </p>
@@ -91,7 +91,7 @@ Cluster 4 is also outstanding on hits and page views while cluster 1 has the top
 </p>
 For the transaction revenues, most of them come from cluster 4. Cluster 1, with the minimal person, is the second largest source for transaction revenue.
 
-According to the results, we believe that cluster 1 the niche market and cluster 4 is our target customer, thus we decided to focus on these two clusters.
+According to the results, I believe that cluster 1 the niche market and cluster 4 is our target customer, thus I decided to focus on these two clusters.
 <p align="center">
   <img src="https://raw.githubusercontent.com/claire-cheng/Google-Analytics-Segmentation-Analysis/main/Cluster%201%20Paid%20Users%20in%20US.png">
 </p>
@@ -103,7 +103,7 @@ Cluster 4 has 14645 observations from 5 different continents. Compared to cluste
 ## **Conclusion and Recommendation**
 In conclusion, most of the transaction revenues are from Cluster 4. Even though Cluster 1 has the least number of visitors, it is the second largest source of Gstore’s transaction revenues. Therefore, Gstore should focus on these two clusters to establish its precision marketing strategy.
 
-Based on the aforementioned analysis, we have 4 recommendations for Gstore listed as below:
+Based on the aforementioned analysis, I have 4 recommendations for Gstore listed as below:
 
 
   1. GStore is recommended to focus on the US market, especially in the states of California, New York, Illinois and Michigan.
@@ -111,5 +111,5 @@ Based on the aforementioned analysis, we have 4 recommendations for Gstore liste
   3. Marketing teams should review the referral traffic and do a further analysis to determine which sites are the ones that are redirecting visitors to GStore’s website.
   4. Gstore should deliver advertisements to the returning users who are using Chrome and Macintosh operating systems to make corporate purchases.
   
-By performing the aforementioned recommendations, we believe GStore can improve its effectiveness and efficiency of the marketing communications and enhance its precision marketing strategy.
+By performing the aforementioned recommendations, I believe GStore can improve its effectiveness and efficiency of the marketing communications and enhance its precision marketing strategy.
 
