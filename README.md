@@ -101,7 +101,8 @@ Cluster 1 consists of 1023 observations from different parts of the world. The m
 Cluster 4 has 14645 observations from 5 different continents. Compared to cluster 1, the most frequent visitor coming channel for cluster 4 is referral traffic, which means that the majority of visitors land on Gstore’s website from another website. These “other” websites may include partner sites, blogs, emails, posts on social media sites and more. In cluster 4, about 31.63% of observations have the transaction revenue. The main source is America, which contributes about 98.55% of the total transaction revenue.To be more specific, about 47.38% of them are from California, 23.26% of them are from New York, and about 7% of them are from Illinois. The majority of observations from cluster 4 are using Chrome as their browser from desktop. Most of them are using the Macintosh operating system, meanwhile, Chrome OS, Linux, and Windows are in the second level. 
 ## **Conclusion and Recommendation**
 In conclusion, most of the transaction revenues are from Cluster 4. Even though Cluster 1 has the least number of visitors, it is the second largest source of Gstore’s transaction revenues. Therefore, Gstore should focus on these two clusters to establish its precision marketing strategy.
-Based on the aforementioned analysis, we have 4 recommendations for Gstore listed as below: 
+Based on the aforementioned analysis, we have 4 recommendations for Gstore listed as below:
+
   1. GStore is recommended to focus on the US market, especially in the states of California, New York, Illinois and Michigan.
   2. The marketing strategy should invest more in Search Engine Optimization and Online Referrals, which are the main sources of target customers.
   3. Marketing teams should review the referral traffic and do a further analysis to determine which sites are the ones that are redirecting visitors to GStore’s website.
