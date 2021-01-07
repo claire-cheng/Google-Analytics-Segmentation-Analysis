@@ -18,5 +18,14 @@ The data is provided by Kaggle. There are 2 different CSV files:
     - This is the training dataset that contains user transactions from August 1st, 2016 to April 30th, 2018.
  - test.csv:
     - This is the testing dataset that contains user transactions from May 1st, 2018 to October 15th, 2018.
-    
 Both of the train and the test sets contain the columns listed under Data Fields (below). The only difference between the train and test sets is the extra information stored in the train set, TransactionRevenue, under one of the JSON columns, Totals. This sub-column  TransactionRevenue contains the revenue information we are trying to predict in this project. In addition, each row in the datasets represents one visit to the GStore. 
+## **Data Fields**
+  1. ChannelGrouping: the channel via which the user came to the store. There are total 8 factors: Organic search, Paid search, Display, Direct, Referral, Social, Affiliates, Other.
+  2. Date: record the date when the user visited the store.
+  3. FullVisitorId: A unique identifier for each user of the Google Merchandise Store.
+  4. SessionId: A unique identifier to identify a session, a series of related message exchanges. For example, there may involve an ongoing communication where several web pages are requested by the client before they check out, session id is the tool to keep track of the current status of the shopper’s cart.
+  5. VisitId: An identifier for this session. This is part of the value usually stored as the _utmb cookie. 
+  6. VisitNumber: The session number for this user. If this is the first session, then this is set to 1. It is stored as an integer.
+  7. VisitStartTime: A timestamp records the date of customer visiting. This variable is expressed as POSIX time. For POSIX time, every day is treated as if it contains exactly 86400 seconds, so it calculated as (sum of days between current date and 1970-01-01) * 86400.
+  8. Device (JSON):
+
